@@ -3,6 +3,8 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/brahma2242)
 [![Gmail](https://img.shields.io/badge/Gmail-Email-red?logo=gmail&logoColor=white)](mailto:brahmareddypalem5757@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github&logoColor=white)](https://github.com/brahma2242p)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Website-blue?style=for-the-badge&logo=googlesites&logoColor=white)](https://www.brahmareddypalam.site/)
+
 
 ---
 
@@ -23,9 +25,11 @@
 
 ---
 
-## 💻 Projects
+## 💻 Projects & Portfolio
 - [SpiceHeritage – Pickle E-Commerce Website](https://github.com/brahma2242p/E-commerce_For_Pickel_Vendors) – Full-stack Java, JSP, PostgreSQL project  
-- [Your WEB3 Crypto Project](#) – Placeholder for future WEB3 projects  
+- [My Portfolio Website](https://www.brahmareddypalam.site/) – Showcases my projects, skills, and contact info  
+- [WEB3 Crypto Projects](#) – Placeholder for future WEB3 projects  
+
 
 ---
 
