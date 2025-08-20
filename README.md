@@ -1,11 +1,40 @@
-- 👋 Hi, I’m @brahma2242p
-- 👀 I’m interested in Computer Science Projects and WEB3 projects in CRYPTOS
-- 🌱 I’m currently Pursuing Computer Science and Engineering
-- 💞️ I’m looking for a Software Job
-- 📫 How to reach me: brahmareddypalem5757@gmail.com
+# 👋 Hi, I’m Brahma Reddy (@brahma2242p)
 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/brahma2242)
+[![Gmail](https://img.shields.io/badge/Gmail-Email-red?logo=gmail&logoColor=white)](mailto:brahmareddypalem5757@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github&logoColor=white)](https://github.com/brahma2242p)
 
-<!---
-brahma2242p/brahma2242p is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+---
+
+## 👀 About Me
+- I’m passionate about **Computer Science Projects** and **WEB3/Crypto projects**.  
+- Currently pursuing **Bachelor of Technology in Computer Science and Engineering**.  
+- Seeking **software job opportunities** to contribute and grow professionally.  
+
+---
+
+## 🌱 Skills & Technologies
+![Java](https://img.shields.io/badge/Java-17+-orange?logo=java)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+![HTML5](https://img.shields.io/badge/HTML5-orange?logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-blue?logo=css3)
+![Oracle](https://img.shields.io/badge/Oracle-Red?logo=oracle)
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+
+---
+
+## 💻 Projects
+- [SpiceHeritage – Pickle E-Commerce Website](https://github.com/brahma2242p/E-commerce_For_Pickel_Vendors) – Full-stack Java, JSP, PostgreSQL project  
+- [Your WEB3 Crypto Project](#) – Placeholder for future WEB3 projects  
+
+---
+
+## 📫 How to Reach Me
+- **Email:** brahmareddypalem5757@gmail.com  
+- **LinkedIn:** [https://www.linkedin.com/in/brahma2242](https://www.linkedin.com/in/brahma2242)  
+- **GitHub:** [https://github.com/brahma2242p](https://github.com/brahma2242p)  
+
+---
+
+## ⚡ Fun Fact
+- Always learning and experimenting with **new tech stacks**, **WEB3**, and **blockchain innovations**!  
