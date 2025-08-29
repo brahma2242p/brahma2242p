@@ -41,4 +41,7 @@
 ---
 
 ## ⚡ Fun Fact
-- Always learning and experimenting with **new tech stacks**, **WEB3**, and **blockchain innovations**!  
+- Always learning and experimenting with **new tech stacks**, **WEB3**, and **blockchain innovations**!
+## 📄 Resume
+You can view my latest resume here: [Download Resume (PDF)](https://github.com/username/your-repo/raw/main/Palam_Brahma_Reddy_Resume.pdf)
+
