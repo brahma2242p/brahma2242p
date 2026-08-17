@@ -362,7 +362,7 @@ Java
 
 <div align="center">
 
-<a href="./assets/Palam_Brahma_Reddy_Resume.pdf">
+<a href="https://raw.githubusercontent.com/brahma2242p/brahma2242p/main/assets/Palam_Brahma_Reddy_Resume.pdf" download>
 
 <img src="https://img.shields.io/badge/📄%20Download%20Resume-1F3864?style=for-the-badge" alt="Download Resume">
 
