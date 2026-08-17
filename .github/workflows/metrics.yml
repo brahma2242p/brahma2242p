@@ -2,8 +2,10 @@ name: Generate Profile Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"    # regenerates daily at midnight UTC
-  workflow_dispatch:         # lets you trigger it manually from the Actions tab
+    - cron: "0 0 * * *" # Daily at midnight UTC
+
+  workflow_dispatch:
+
   push:
     paths:
       - ".github/workflows/metrics.yml"
@@ -14,14 +16,91 @@ permissions:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Generate GitHub Metrics
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+
           filename: assets/metrics.svg
-          # --- plugins ---
+
+          # ============================================================
+          # BASE PROFILE INFORMATION
+          # ============================================================
+          base: header, activity, community, repositories, metadata
+
+          # ============================================================
+          # LANGUAGES
+          # Includes accessible private repositories when token permits
+          # ============================================================
           plugin_languages: yes
           plugin_languages_limit: 8
           plugin_languages_analysis_timeout: 15
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_sections: most-used
+
+          # Ignore languages that don't meaningfully represent
+          # your backend engineering skills
+          plugin_languages_ignored: >-
+            html, css, less, scss, tex, dockerfile, makefile,
+            qmake, lex, cmake, shell, gnuplot
+
+          # ============================================================
+          # CONTRIBUTION CALENDAR
+          # ============================================================
+          plugin_calendar: yes
+          plugin_calendar_limit: 1
+
+          # ============================================================
+          # CONTRIBUTION STREAK
+          # ============================================================
           plugin_streak: yes
-          base: header, activity, community, repositories, metadata
+
+          # ============================================================
+          # CODING HABITS
+          # ============================================================
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+
+          # India timezone
+          config_timezone: Asia/Kolkata
+
+          # ============================================================
+          # LINES OF CODE CHANGED
+          # ============================================================
+          plugin_lines: yes
+          plugin_lines_delay: 30
+
+          # ============================================================
+          # RECENT ENGINEERING ACTIVITY
+          # ============================================================
+          plugin_activity: yes
+          plugin_activity_limit: 8
+          plugin_activity_days: 0
+          plugin_activity_filter: >-
+            issue, pr, release, fork, review, ref/create
+
+          # ============================================================
+          # OPEN SOURCE / CONTRIBUTIONS
+          # ============================================================
+          plugin_notable: yes
+          plugin_notable_indepth: yes
+          plugin_notable_repositories: yes
+
+          # ============================================================
+          # GITHUB ACHIEVEMENTS
+          # ============================================================
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+
+          # ============================================================
+          # REPOSITORY TRAFFIC
+          # ============================================================
+          plugin_traffic: yes
+
+          # ============================================================
+          # ERROR HANDLING
+          # ============================================================
+          plugins_errors_fatal: no
