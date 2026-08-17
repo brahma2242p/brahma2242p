@@ -5,10 +5,10 @@ on:
   schedule:
     - cron: "0 0 * * 0"
 
-  # Allow manual generation from Actions
+  # Allow manual execution
   workflow_dispatch:
 
-  # Regenerate when this workflow itself changes
+  # Run when this workflow is changed
   push:
     paths:
       - ".github/workflows/metrics.yml"
@@ -20,42 +20,42 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
 
+    # Prevent an unexpected hang from running forever
+    timeout-minutes: 15
+
     steps:
       - name: Generate GitHub Metrics
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
+
         with:
+          # GitHub PAT stored securely in repository secrets
           token: ${{ secrets.METRICS_TOKEN }}
 
+          # Output file
           filename: assets/metrics.svg
 
-          # ------------------------------------------------------------
-          # BASIC PROFILE INFORMATION
-          # ------------------------------------------------------------
+          # ==========================================================
+          # BASE PROFILE INFORMATION
+          # ==========================================================
           base: header, activity, community, repositories, metadata
 
-          # ------------------------------------------------------------
+          # ==========================================================
           # MOST USED LANGUAGES
-          # Includes repositories accessible by METRICS_TOKEN
-          # ------------------------------------------------------------
+          # Includes repositories accessible through METRICS_TOKEN
+          # ==========================================================
           plugin_languages: yes
-          plugin_languages_limit: 8
+          plugin_languages_limit: 6
           plugin_languages_analysis_timeout: 5
           plugin_languages_details: bytes-size, percentage
 
-          # ------------------------------------------------------------
-          # CONTRIBUTION CALENDAR
-          # ------------------------------------------------------------
+          # ==========================================================
+          # CURRENT-YEAR CONTRIBUTION CALENDAR
+          # ==========================================================
           plugin_calendar: yes
-          plugin_calendar_limit: 1
 
-          # ------------------------------------------------------------
-          # RECENT GITHUB ACTIVITY
-          # ------------------------------------------------------------
-          plugin_activity: yes
-          plugin_activity_limit: 6
-
-          # ------------------------------------------------------------
-          # DO NOT FAIL THE WHOLE WORKFLOW IF A PLUGIN HAS
-          # INSUFFICIENT PERMISSIONS
-          # ------------------------------------------------------------
+          # ==========================================================
+          # ERROR HANDLING
+          # Don't fail the entire render if a non-critical plugin
+          # encounters an API/permission issue
+          # ==========================================================
           plugins_errors_fatal: no
