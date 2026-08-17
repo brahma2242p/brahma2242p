@@ -1,0 +1,31 @@
+name: Update Space Shooter Game
+
+on:
+  schedule:
+    - cron: "0 0 * * *"    # regenerates daily at midnight UTC, using your latest contributions
+  workflow_dispatch:         # lets you trigger it manually from the Actions tab
+  push:
+    paths:
+      - ".github/workflows/space-shooter.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update-game:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # required by gh-space-shooter
+
+      - name: Generate space shooter GIF from my contribution graph
+        uses: czl9707/gh-space-shooter@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          output-path: "assets/space-shooter.gif"
+          strategy: "random"   # attack pattern: column | row | random
+
+      # The action commits assets/space-shooter.gif back to this branch,
+      # amending the previous commit by default so the repo doesn't bloat.
+      # README.md already points to this exact path.
